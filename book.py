@@ -34,6 +34,5 @@ sleep = 'Погоди, дай-ка подумать.., наверное еще �
 Loading_rus = 'Пожалуйста подождите идет загрузка..'
 
 # англ вариант когда не ясно
-
 sleep_eng = "Wait a minute, let me think..., I guess the script for your request isn't ready yet!"
 Loading_eng = 'Please wait for loading...'

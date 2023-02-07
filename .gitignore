@@ -91,3 +91,4 @@ telegram.jpg
 # virtual env
 venv*
 config.py
+db1.db

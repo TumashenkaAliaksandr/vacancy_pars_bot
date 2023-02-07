@@ -1,4 +1,5 @@
 import telebot, time
+import sqlite3
 from book_stikers import *
 from config import *
 from book import *
@@ -12,6 +13,16 @@ bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
 def start(message):
+    connect = sqlite3.connect('db1.db')
+    cursor = connect.cursor()
+
+    cursor.execute("""CREATE TABLE IF NOT EXISTS users_id(
+        id INTEGER UNIQUE
+    )""")
+    connect.commit()
+    user_id = [message.chat.id]
+    cursor.execute("INSERT INTO users_id VALUES(?);", user_id)
+    connect.commit()
     bot.send_sticker(message.chat.id, sticker)  # выводим первый стикер
     bot.send_message(message.chat.id, message.from_user.first_name + hello)  # приветствие используя id
     bot.send_message(message.chat.id, lang, reply_markup=keyboard1)  # выводим клавиатуру для выбора языка
