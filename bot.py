@@ -20,9 +20,17 @@ def start(message):
         id INTEGER UNIQUE
     )""")
     connect.commit()
-    user_id = [message.chat.id]
-    cursor.execute("INSERT INTO users_id VALUES(?);", user_id)
-    connect.commit()
+
+    people_id = message.chat.id
+    cursor.execute(f"SELECT id FROM users_id WHERE id = {people_id}")
+    data = cursor.fetchone()
+    if data is None:
+
+        user_id = [message.chat.id]
+        cursor.execute("INSERT INTO users_id VALUES(?);", user_id)
+        connect.commit()
+    else:
+        bot.send_message(message.chat.id, '👋 Nice to see you again!')
     bot.send_sticker(message.chat.id, sticker)  # выводим первый стикер
     bot.send_message(message.chat.id, message.from_user.first_name + hello)  # приветствие используя id
     bot.send_message(message.chat.id, lang, reply_markup=keyboard1)  # выводим клавиатуру для выбора языка
