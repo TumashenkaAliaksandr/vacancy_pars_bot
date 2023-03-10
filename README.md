@@ -1,7 +1,7 @@
-<h1 align="center"><img width="30" height="30" src="C:\Users\ty4a\Desktop\vacancy_pars_bot\head_hunter_.jpg"> Python telegram bot <a href="https://t.me/py_vacancies_bot" target="_blank">Vacancies from MINSK</a> 
+<h1 align="center"><img width="30" height="30" src="https://raw.githubusercontent.com/TumashenkaAliaksandr/vacancy_pars_bot/74237ac33e8ef4eeafbfb687408049d67f321172/head_hunter_.jpg"> Python telegram bot <a href="https://t.me/py_vacancies_bot" target="_blank">Vacancies from MINSK</a> 
 <img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/></h1>
 <p align="center">
-  <img width="110" height="110" src="C:\Users\ty4a\Desktop\vacancy_pars_bot\photo_bot.jpg">
+  <img width="110" height="110" src="https://raw.githubusercontent.com/TumashenkaAliaksandr/vacancy_pars_bot/74237ac33e8ef4eeafbfb687408049d67f321172/photo_bot.jpg">
 </p>
 <h3 align="center">This bot sends new jobs from the city of Minsk.</h3>
 
